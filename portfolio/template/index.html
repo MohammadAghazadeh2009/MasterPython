@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio | Home</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="logo">MyPortfolio</h1>
+      <ul class="nav-links">
+        <li><a class="active" href="{{ url_for('index_view') }}">Home</a></li>
+        <li><a href="{{ url_for('skills_view') }}">Skills</a></li>
+        <li><a href="{{ url_for('projects_view') }}">Projects</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Hello, I'm <span>{{context.username}}</span></h2>
+      <p>{{context.introducing}}</p>
+      
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Your Name · All Rights Reserved</p>
+  </footer>
+</body>
+</html>

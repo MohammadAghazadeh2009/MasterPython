@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio | Skills</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="logo">MyPortfolio</h1>
+      <ul class="nav-links">
+        <li><a href="{{ url_for('index_view') }}">Home</a></li>
+        <li><a class="active" href="{{ url_for('skills_view') }}">Skills</a></li>
+        <li><a href="{{ url_for('projects_view') }}">Projects</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="skills">
+    <h2>My Skills</h2>
+    <div class="skill-grid">
+      <div class="skill-item">
+        <h3>{{context.skills[1]}}</h3>
+        <p>Building accessible, semantic, and SEO-friendly markup.</p>
+      </div>
+      <div class="skill-item">
+        <h3>{{context.skills[2]}}</h3>
+        <p>Crafting responsive and visually appealing designs.</p>
+      </div>
+      <div class="skill-item">
+        <h3>{{context.skills[0]}}</h3>
+        <p>Bringing interactivity and logic to web pages.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Your Name · All Rights Reserved</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio | Projects</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <header>
+    <nav>
+      <h1 class="logo">MyPortfolio</h1>
+      <ul class="nav-links">
+        <li><a href="{{ url_for('index_view') }}">Home</a></li>
+        <li><a href="{{ url_for('skills_view') }}">Skills</a></li>
+        <li><a class="active" href="{{ url_for('projects_view') }}">Projects</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="projects">
+    <h2>My Projects</h2>
+    <div class="project-grid">
+      <div class="project-item">
+        <h3>Portfolio Website</h3>
+        <p>A fully responsive personal portfolio website built with HTML, CSS, and JS.</p>
+      </div>
+      <div class="project-item">
+        <h3>Todo App</h3>
+        <p>A to-do list application with local storage using JavaScript.</p>
+      </div>
+      <div class="project-item">
+        <h3>API Dashboard</h3>
+        <p>An analytics dashboard consuming public APIs and displaying live data.</p>
+      </div>
+    </div>
+  </section>
+  <br>
+  <section class="hero">
+    <p>My Git-hub address: <a href="{{context.github}}">{{context.github}}</a></p>
+    
+  </section>
+
+  <footer>
+    <p>© 2026 Your Name · All Rights Reserved</p>
+  </footer>
+</body>
+</html>
